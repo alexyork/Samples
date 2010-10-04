@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Jasmine Test Runner</title>
+        <style type="text/css">
+            .odd  { background-color: Red; }
+            .even { background-color: Yellow; }
+        </style>
+        <script type="text/javascript" src="../Scripts/jquery.js"></script>
+        <script type="text/javascript" src="../01-FizzBuzz/fizzbuzz.js"></script>
+        <script type="text/javascript" src="../02-Listify/listify.jquery.js"></script>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                for (var i = 1; i <= 100; i++) {
+                    $("#fizzbuzz").append(
+                        $("<li>" + fizzBuzz.getResult(i) + "</li>")
+                    );
+                }
+
+                $("#fizzbuzz").listify().css("border", "solid 5px Blue");
+
+            });
+        </script>
+
+        <ul id="fizzbuzz"></ul>
+
+    </body>
+</html>
